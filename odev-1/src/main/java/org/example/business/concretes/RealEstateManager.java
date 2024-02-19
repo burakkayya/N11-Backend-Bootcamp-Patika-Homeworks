@@ -1,19 +1,17 @@
-package org.example.business;
+package org.example.business.concretes;
 
-import org.example.entities.House;
+import org.example.business.abstracts.RealEstateService;
 import org.example.entities.RealEstate;
-import org.example.entities.SummerHouse;
-import org.example.entities.Villa;
 import org.example.entities.enums.RealEstateType;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class RealEstateService {
-    private List<RealEstate> realEstates;
+public class RealEstateManager implements RealEstateService {
+    private final List<RealEstate> realEstates;
 
-    public RealEstateService() {
+    public RealEstateManager() {
         this.realEstates = new ArrayList<>();
     }
 
@@ -21,7 +19,7 @@ public class RealEstateService {
         realEstates.add(realEstate);
     }
 
-    public List<RealEstate> getRealEstatesByType(RealEstateType type) {
+    public List<RealEstate> getRealEstatesByType(RealEstateType type) { // getHouseList, getVillaList, getSummerHouseList
         return realEstates.stream()
                 .filter(realEstate -> realEstate.getType() == type)
                 .collect(Collectors.toList());

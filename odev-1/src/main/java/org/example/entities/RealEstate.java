@@ -2,7 +2,7 @@ package org.example.entities;
 
 import org.example.entities.enums.RealEstateType;
 
-public class RealEstate {
+public abstract class RealEstate {
     private RealEstateType type;
     private int area;
     private int roomCount;
