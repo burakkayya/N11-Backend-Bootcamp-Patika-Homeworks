@@ -4,6 +4,7 @@ import org.example.entities.House;
 import org.example.entities.RealEstate;
 import org.example.entities.SummerHouse;
 import org.example.entities.Villa;
+import org.example.entities.enums.RealEstateType;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,21 +21,9 @@ public class RealEstateService {
         realEstates.add(realEstate);
     }
 
-    public List<RealEstate> getHouseList() {
+    public List<RealEstate> getRealEstatesByType(RealEstateType type) {
         return realEstates.stream()
-                .filter(realEstate -> realEstate instanceof House)
-                .collect(Collectors.toList());
-    }
-
-    public List<RealEstate> getVillaList() {
-        return realEstates.stream()
-                .filter(realEstate -> realEstate instanceof Villa)
-                .collect(Collectors.toList());
-    }
-
-    public List<RealEstate> getSummerHouseList() {
-        return realEstates.stream()
-                .filter(realEstate -> realEstate instanceof SummerHouse)
+                .filter(realEstate -> realEstate.getType() == type)
                 .collect(Collectors.toList());
     }
 
@@ -51,14 +40,14 @@ public class RealEstateService {
                 .orElse(0.0);
     }
 
-    public int getTotalPrice(String realEstateType) {
+    public int getTotalPrice(RealEstateType realEstateType) {
         return realEstates.stream()
                 .filter(realEstate -> realEstate.getType().equals(realEstateType))
                 .mapToInt(RealEstate::getPrice)
                 .sum();
     }
 
-    public double getAverageArea(String realEstateType) {
+    public double getAverageArea(RealEstateType realEstateType) {
         return realEstates.stream()
                 .filter(realEstate -> realEstate.getType().equals(realEstateType))
                 .mapToInt(RealEstate::getArea)

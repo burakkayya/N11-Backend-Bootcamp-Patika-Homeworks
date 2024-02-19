@@ -1,7 +1,9 @@
 package org.example.entities;
 
+import org.example.entities.enums.RealEstateType;
+
 public class RealEstate {
-    private String type;
+    private RealEstateType type;
     private int area;
     private int roomCount;
     private int salonCount;
@@ -10,7 +12,7 @@ public class RealEstate {
     public RealEstate() {
     }
 
-    public RealEstate(String type, int area, int roomCount, int salonCount, int price) {
+    public RealEstate(RealEstateType type, int area, int roomCount, int salonCount, int price) {
         this.type = type;
         this.area = area;
         this.roomCount = roomCount;
@@ -18,11 +20,11 @@ public class RealEstate {
         this.price = price;
     }
 
-    public String getType() {
+    public RealEstateType getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(RealEstateType type) {
         this.type = type;
     }
 
