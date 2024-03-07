@@ -20,6 +20,15 @@ Homework2 Screenshots
 
 ![someMethods2](https://github.com/burakkayya/N11-Backend-Bootcamp-Patika-Homeworks/assets/56073855/5340d5db-84ea-4a5f-96e8-7613be957f68)
 
+-----------------------------------------------------------------------------------
+
+Homework3 Screenshots
+
+![daily](https://github.com/burakkayya/N11-Backend-Bootcamp-Patika-Homeworks/assets/56073855/85704154-88b7-4384-89ea-6a7cd52e7f82)
+
+![weekly](https://github.com/burakkayya/N11-Backend-Bootcamp-Patika-Homeworks/assets/56073855/15c78b9d-8072-4294-bb30-b2e5d23f6f34)
+
+![monthly](https://github.com/burakkayya/N11-Backend-Bootcamp-Patika-Homeworks/assets/56073855/f61c0dcf-1b4d-4521-afe0-3cd35058ff05)
 
 
 
